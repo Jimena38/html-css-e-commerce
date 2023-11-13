@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Método de Pago Donatto Indumentaria</title>
+    <link rel="stylesheet" href="./style-pago.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="window">
+                <!-- Información del pedido -->
+                <div class="order-info">
+                    <div class="order-info-content">
+                        <h2></h2>
+                        <div class="total">               
+                            <h5>Gracias por su compra</h5>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Información de pago -->
+                <div class="credit-info">
+                    <div class="credit-info-content">
+                        <table class="half-input-table">
+                            <tr>
+                                <td>Por favor escoja un método de pago</td>
+                                <td>
+                                    <!-- Selector de tarjetas -->
+                                    <div class="dropdown" id="card-dropdown">
+                                        <div class="dropdown-btn" id="current-card">Visa</div>
+                                        <div class="dropdown-select">
+                                            <ul>
+                                                <li>Master Card</li>
+                                                <li>Naranja</li>
+                                                <li>BBVA</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                        
+                        <!-- Imagen de la tarjeta -->
+                        <img src="https://dl.dropboxusercontent.com/s/ubamyu6mzov5c80/visa_logo%20%281%29.png" height="80" class="credit-card-image" id="credit-card-image" alt="Visa Logo">
+                        
+                        <!-- Formulario de pago -->
+                        <form>
+                            <!-- Otros campos del formulario -->
+                            <label for="nombre-titular">Nombre del Titular de la Tarjeta</label>
+                            <input type="text" id="nombre-titular" required>
+                    
+                            <label for="numero-tarjeta">Número de Tarjeta de Crédito</label>
+                            <input type="text" id="numero-tarjeta" required>
+                    
+                            <label for="fecha-vencimiento">Fecha de Vencimiento</label>
+                            <input type="text" id="fecha-vencimiento" placeholder="MM/AA" required>
+                    
+                            <label for="cvv">CVV</label>
+                            <input type="text" id="cvv" required>
+                    
+
+                            <!-- Botón de pago -->
+                            <div class="pay-btn-container">
+                                <button class="pay-btn" onclick="validarPago()">Pagar</button>
+                            </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <script src="./custom-pago.js"></script>
+</body>
+</html>
